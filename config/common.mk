@@ -144,4 +144,5 @@ DEVICE_PACKAGE_OVERLAYS += vendor/uosp/overlay/common
 # Navbar
 PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationOverlayHidden
