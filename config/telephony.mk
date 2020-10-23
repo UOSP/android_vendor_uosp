@@ -1,6 +1,6 @@
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
-    vendor/lineage/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
+    vendor/uosp/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
 
 # World APN list
 PRODUCT_PACKAGES += \
@@ -20,3 +20,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # (for devices that check this)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     net.tethering.noprovisioning=true
+
+# Disable mobile data in roaming by default.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.android.dataroaming=false

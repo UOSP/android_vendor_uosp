@@ -1,0 +1,20 @@
+# Versioning System
+UOSP_BUILD_TYPE := OFFICIAL
+UOSP_VERSION_ID := Eleven
+
+
+# Set all versions
+BUILD_DATE := $(shell date -u +%Y%m%d)
+BUILD_TIME := $(shell date -u +%H%M)
+UOSP_VERSION := UOSP-$(UOSP_VERSION_ID)-$(BUILD_DATE)-$(BUILD_TIME)-$(UOSP_BUILD_TYPE)
+BUILD_DATE_TIME := $(BUILD_TIME)$(BUILD_DATE)
+PROD_VERSION := $(UOSP_VERSION)
+ROM_FINGERPRINT := UOSP/$(PLATFORM_VERSION)/$(UOSP_BUILD_TYPE)/$(BUILD_DATE)$(BUILD_TIME)
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    BUILD_DISPLAY_ID=$(BUILD_ID) \
+    ro.uosp.version=$(UOSP_VERSION_ID) \
+    ro.build.datetime=$(BUILD_DATE_TIME) \
+    ro.mod.version=$(UOSP_BUILD_TYPE)-$(UOSP_VERSION_ID)-$(BUILD_DATE) \
+    ro.uosp.fingerprint=$(ROM_FINGERPRINT)
+    
