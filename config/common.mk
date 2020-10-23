@@ -78,7 +78,8 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    UnknownThemesStub
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
