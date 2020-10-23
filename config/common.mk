@@ -101,6 +101,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     LatinIME
 
+# Additional apps
+PRODUCT_PACKAGES += \
+    ExactCalculator \
+    Jelly
+
 # Include uosp LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/uosp/overlay/dictionaries
 
