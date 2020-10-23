@@ -14,6 +14,27 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+# Override product info for Google Play Services and SafetyNet
+ifeq ($(PRODUCT_OVERRIDE_INFO),true)
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.product.system.name=$(PRODUCT_OVERRIDE_NAME) \
+    ro.product.product.name=$(PRODUCT_OVERRIDE_NAME) \
+    ro.product.system_ext.name=$(PRODUCT_OVERRIDE_NAME) \
+    ro.product.odm.name=$(PRODUCT_OVERRIDE_NAME) \
+    ro.product.vendor.name=$(PRODUCT_OVERRIDE_NAME) \
+    ro.build.flavor=$(PRODUCT_OVERRIDE_NAME)-user \
+    ro.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT) \
+    ro.system.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT) \
+    ro.product.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT) \
+    ro.system_ext.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT) \
+    ro.bootimage.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT) \
+    ro.odm.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT) \
+    ro.vendor.build.fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT)
+
+# Description needs special treatment because it contains spaces
+PRIVATE_BUILD_DESC := $(PRODUCT_OVERRIDE_DESC)
+endif
+
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
     vendor/uosp/prebuilt/common/lib/content-types.properties:$(TARGET_COPY_OUT_SYSTEM)/lib/content-types.properties
@@ -108,6 +129,9 @@ PRODUCT_PACKAGES += \
 
 # Include uosp LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/uosp/overlay/dictionaries
+
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
