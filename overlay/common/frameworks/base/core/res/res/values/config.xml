@@ -97,9 +97,6 @@
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
 
 
-    <!-- If this is true, long press on power button will be available from the non-interactive state -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
-
     <!-- List of packages that can use the Conversation space for their category messages
     notifications until they target R -->
     <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">
