@@ -34,6 +34,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Include AOSP audio files
 include vendor/uosp/config/aosp_audio.mk
 
+# Inherit from font config
+$(call inherit-product, vendor/uosp/config/fonts.mk)
+
 # Inherit from bootanimation config
 $(call inherit-product, vendor/uosp/config/bootanimation.mk)
 
