@@ -113,15 +113,12 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly
 
-# Include uosp LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/uosp/overlay/dictionaries
-
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/uosp/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/uosp/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/uosp/overlay
 
 # Navbar
 PRODUCT_PACKAGES += \
