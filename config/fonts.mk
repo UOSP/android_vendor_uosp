@@ -12,4 +12,5 @@ PRODUCT_PACKAGES += \
     FontKaiOverlay \
     FontRubikRubikOverlay \
     FontSamOverlay \
-    FontVictorOverlay
+    FontVictorOverlay \
+    FontGoogleSansOverlay

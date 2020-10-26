@@ -64,7 +64,8 @@ PRODUCT_PACKAGES += \
 # Themes
 PRODUCT_PACKAGES += \
     ThemePicker \
-    UnknownThemesStub
+    UnknownThemesStub \
+    AccentColorBlueOverlay
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \

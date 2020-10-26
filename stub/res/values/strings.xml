@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Unknown Themes</string>
+    <string name="theme_name_default">Default</string>
     <string name="theme_name_anthony">Ash</string>
     <string name="theme_name_johanna">Collage</string>
     <string name="theme_name_kai">Sand</string>
     <string name="theme_name_reiko">Crayon</string>
     <string name="theme_name_victor">Carbon</string>
     <string name="theme_overlay_color_anthony">com.android.theme.color.black</string>
+    <string name="theme_overlay_color_default">com.android.theme.color.blue</string>
+    <string name="theme_overlay_font_default">com.android.theme.font.googlesans</string>
     <string name="theme_overlay_color_johanna">com.android.theme.color.green</string>
     <string name="theme_overlay_color_kai">com.android.theme.color.sand</string>
     <string name="theme_overlay_color_reiko">com.android.theme.color.purple</string>
@@ -51,4 +54,5 @@
     <string name="theme_title_kai">@string/theme_name_kai</string>
     <string name="theme_title_reiko">@string/theme_name_reiko</string>
     <string name="theme_title_victor">@string/theme_name_victor</string>
+    <string name="theme_title_default">@string/theme_name_default</string>
 </resources>

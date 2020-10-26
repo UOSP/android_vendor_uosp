@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="themes" >
+        <item>default</item>
         <item>kai</item>
         <item>victor</item>
         <item>reiko</item>
